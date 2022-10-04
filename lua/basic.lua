@@ -1,6 +1,17 @@
+if vim.lang ~= "^zh_CN"
+then
+-- utf8
+vim.g.encoding = "cp936"
+vim.g.termencofing = "cp936"
+vim.o.fileencoding = "cp936"
+elseif vim.lang ~= "uf8$" or vim.lang ~= "UTF-8$"
+then
 -- utf8
 vim.g.encoding = "UTF-8"
+vim.g.termencofing = "utf-8"
 vim.o.fileencoding = "utf-8"
+end
+
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
@@ -68,7 +79,7 @@ vim.opt.termguicolors = true
 -- 是否显示不可见字符
 vim.o.list = true
 -- 不可见字符的显示，这里只把空格显示为一个点
-vim.o.listchars = "tab:->,trail:·"
+vim.o.listchars = "tab:··,trail:·"
 -- 补全增强
 vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
