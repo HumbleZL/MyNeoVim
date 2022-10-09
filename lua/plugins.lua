@@ -68,9 +68,14 @@ packer.startup({
     })
     --------------------- LSP --------------------
     -- use({ "williamboman/nvim-lsp-installer", commit = "36b44679f7cc73968dbb3b09246798a19f7c14e0" })
-    use({ "williamboman/nvim-lsp-installer" })
-    -- Lspconfig
-    use({ "neovim/nvim-lspconfig" })
+    -- use({ "williamboman/nvim-lsp-installer" })
+    use({
+        -- Lsp Installer
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        -- Lspconfig
+        "neovim/nvim-lspconfig",
+        })
     -- 补全引擎
     use("hrsh7th/nvim-cmp")
     -- 补全源
@@ -117,9 +122,11 @@ packer.startup({
 --[[
 pcall(
   vim.cmd,
+  [==[
 augroup packer_user_config
 autocmd!
 autocmd BufWritePost plugins.lua source <afile> | PackerSync
 augroup end
+]==]
 )
-]]
+--]]

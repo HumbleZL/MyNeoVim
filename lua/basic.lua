@@ -1,16 +1,7 @@
-if vim.lang ~= "^zh_CN"
-then
--- utf8
-vim.g.encoding = "cp936"
-vim.g.termencofing = "cp936"
-vim.o.fileencoding = "cp936"
-elseif vim.lang ~= "uf8$" or vim.lang ~= "UTF-8$"
-then
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.g.termencofing = "utf-8"
-vim.o.fileencoding = "utf-8"
-end
+vim.o.fileencodings = "utf-8,ucs-bom,cp936"
 
 -- jkhl 移动时光标周围保留8行
 vim.o.scrolloff = 8

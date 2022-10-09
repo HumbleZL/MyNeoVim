@@ -124,8 +124,8 @@ map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
 map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
 pluginKeys.nvimTreeList = { -- 打开文件或文件夹
-  { key = { "o", "<2-LeftMouse>" }, action = "edit" },
-  { key = "<CR>", action = "system_open" },
+  { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
+  --{ key = "<CR>", action = "system_open" },
   -- v分屏打开文件
   { key = "v", action = "vsplit" },
   -- h分屏打开文件
@@ -137,7 +137,7 @@ pluginKeys.nvimTreeList = { -- 打开文件或文件夹
   { key = "R", action = "refresh" },
   -- 文件操作
   { key = "a", action = "create" },
-  { key = "d", action = "remove" },
+  --{ key = "d", action = "remove" },
   { key = "r", action = "rename" },
   { key = "x", action = "cut" },
   { key = "c", action = "copy" },
@@ -169,7 +169,7 @@ map("n", "<leader>bp", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+map("n", "<leader>f", ":Telescope live_grep<CR>", opt)
 -- Telescope 列表中 插入模式快捷键
 pluginKeys.telescopeList = {
   i = {
@@ -230,7 +230,7 @@ pluginKeys.mapLSP = function(mapbuf)
   mapbuf("n", "gp", "<cmd>Lspsaga show_line_diagnostics<CR>", opt)
   mapbuf("n", "gj", "<cmd>Lspsaga diagnostic_jump_next<cr>", opt)
   mapbuf("n", "gk", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opt)
-  mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
+  --mapbuf("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
   -- 未用
   -- mapbuf("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
   -- mapbuf("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)

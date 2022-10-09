@@ -1,7 +1,10 @@
--- local lsp_installer = require("nvim-lsp-installer")
-require("nvim-lsp-installer").setup({
+-- local lsp_installer = require("mason")
+require("mason").setup({
   -- 自动安装 Language Servers
   automatic_installation = true,
+})
+require("mason-lspconfig").setup({
+    --ensure_installed = {"clangd", "sumneko_lua", "pyright"},
 })
 local lspconfig = require("lspconfig")
 
@@ -10,7 +13,7 @@ local lspconfig = require("lspconfig")
 -- key 必须为下列网址列出的 server name，不可以随便写
 -- https://github.com/williamboman/nvim-lsp-installer#available-lsps
 local servers = {
-  --clangd = require("lsp.config.clangd"),
+  clangd = require("lsp.config.clangd"),
   sumneko_lua = require("lsp.config.lua"), -- lua/lsp/config/lua.lua
   bashls = require("lsp.config.bash"),
   pyright = require("lsp.config.pyright"),
