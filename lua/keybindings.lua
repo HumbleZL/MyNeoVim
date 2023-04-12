@@ -158,7 +158,7 @@ map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
 -- "moll/vim-bbye" 关闭当前 buffer
 map("n", "<leader>bc", ":Bdelete!<CR>", opt)
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
+--map("n", "<C-w>", ":Bdelete!<CR>", opt)
 -- 关闭左/右侧标签页
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)

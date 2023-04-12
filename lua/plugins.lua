@@ -88,7 +88,7 @@ packer.startup({
     -- 常见编程语言代码段
     use("rafamadriz/friendly-snippets")
     -- Lua 增强
-    use("folke/lua-dev.nvim")
+    use("folke/neodev.nvim")
     --------------------- colorschemes --------------------
     -- tokyonight
     use("folke/tokyonight.nvim")
